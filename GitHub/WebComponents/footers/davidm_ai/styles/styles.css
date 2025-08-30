@@ -1,0 +1,21 @@
+@import url('footer.css');
+
+
+
+:root{
+    --primary: #3ecf8e;
+    --primary-dark:#37996b;
+    --primary-darker:#317f5a;
+    --headline-color: #f9f9f9;
+    --text-color: #7e7e7e;
+    --bg: #1c1c1c;
+    --footer-bg: #151515;
+    --footer-border: #3e3e3e;
+    --gray-border-hover: #505050;
+    --gray-menu-button: #7e7e7e;
+    --gray-menu-button-hover: #232323;
+    --navbar-height:64px;
+    --gray-text-hover: #8f8f8f;
+    --gray-icon: #a0a0a0;
+    --footer-width: 64rem;
+}
