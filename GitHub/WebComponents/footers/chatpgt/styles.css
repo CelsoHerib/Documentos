@@ -1,0 +1,96 @@
+/* Variables opcionales */
+:root {
+    --footer-bg: #222;
+    --footer-text: #fff;
+    --footer-link: #bbb;
+    --footer-link-hover: #fff;
+}
+
+/* Estructura base para sticky footer */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1; /* Esto empuja el footer hacia abajo */
+}
+
+/* Estilos del footer */
+footer {
+    width: 100%;
+    background: var(--footer-bg);
+    color: var(--footer-text);
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.footer-section {
+    flex: 1 1 200px;
+    margin: 0.5rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-section ul li {
+    margin: 0.3rem 0;
+}
+
+.footer-section ul li a {
+    color: var(--footer-link);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: var(--footer-link-hover);
+}
+
+.footer-icons a img {
+    width: 120px;
+    margin-right: 0.5rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 0.8rem;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Adaptación para móviles */
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-icons a img {
+        width: 100px;
+        margin: 0.3rem;
+    }
+}
