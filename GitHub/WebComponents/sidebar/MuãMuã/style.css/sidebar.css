@@ -214,7 +214,7 @@ body.collapsed .search-wrapper input::placeholder{
 
 .tooltip .tooltip-content{
     visibility: hidden;
-    background: var(tollet-bg);
+    background: var(--tooltip-bg);
     color: var(--white);
     text-align: center;
     border-radius: 6px;
