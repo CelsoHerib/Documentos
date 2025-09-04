@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background: url('./images/webaliser-_TPTXZd9mOo-unsplash.jpg');
+    background-size: cover;
+    height: 100vh;
+    background-position: center;
+}
+
+nav{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    box-shadow: 0 0 10px #000;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.chk1{
+    display: none;
+}
+
+i{
+    color: #fff;
+    cursor: pointer;
+}
+
+nav .logo{
+    flex: 1;
+    color: #fff;
+    margin-left: 50px;
+    text-transform: uppercase;
+}
+
+nav .search-box{
+    flex: 1;
+}
