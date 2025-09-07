@@ -20,3 +20,12 @@ body{
     height: 100vh;
     background-color: var(--body-color);
 }
+
+body.dark{
+    --body-color: #18191a;
+    --nav-color: #242526;
+    --side-nav: #242526;
+    --text-color: #ccc;
+    --search-bar: #242528;
+    --search-text: #fff;
+}
