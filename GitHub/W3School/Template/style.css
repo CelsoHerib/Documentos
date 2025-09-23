@@ -2,8 +2,23 @@
 body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 .w3-row-padding img {margin-bottom: 12px}
 /* Set the width of the sidebar to 120px */
-.w3-sidebar {width: 150px;background: #222;}
+.w3-sidebar {width: 140px;background: #222; border-top-right-radius: 20px; border-bottom-right-radius: 20px;}
 /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
 #main {margin-left: 140px}
 /* Remove margins from "page content" on small screens */
 @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+
+body{
+    background: #000000;
+}
+ *{
+    user-select: none;
+ }
+ a{
+    cursor: pointer;
+ }
+
+ .w3-sidebar a:hover{
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+ }
