@@ -1,58 +1,92 @@
 @import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Sen:wght@400..800&display=swap');
 
-:root{
+:root {
     --color-barra-lateral: rgb(255, 255, 255);
+
     --color-text: rgb(0, 0, 0);
     --color-text-menu: rgb(143, 136, 144);
+
     --color-boton: rgb(0, 0, 50);
-    --color-boton-text:rgb(255, 255, 200);
+    --color-boton-text: rgb(255, 255, 200);
+
     --color-menu-hover: rgb(238, 238, 238);
     --color-menu-hover-text: rgb(0, 0, 100);
+
+    --color-linea: rgb(143, 136, 144);
+
+    --color-interruptor-base: rgb(4, 51, 16);
+    --color-interruptor-circulo: rgb(255, 255, 255);
+
 }
 
-*{
+.tema-oscuro {
+    --color-barra-lateral: rgb(44, 45, 44);
+
+    --color-text: rgb(255, 255, 255);
+    --color-text-menu: rgb(110, 110, 117);
+
+    --color-boton: rgb(255, 255, 255);
+    --color-boton-text: rgb(0, 0, 0);
+
+    --color-menu-hover: rgb(0, 0, 0);
+    --color-menu-hover-text: rgb(238, 238, 238);
+
+    --color-linea: rgb(71, 71, 78);
+
+    --color-interruptor-base: rgb(93, 238, 112);
+    --color-interruptor-circulo: rgb(240, 240, 240);
+}
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     user-select: none;
 }
 
-body{
+body {
     height: 100vh;
     width: 100%;
     background-color: darkcyan;
     font-family: "Sen", sans-serif;
 }
 
-.barra-lateral{
+.barra-lateral {
     width: 250px;
     height: 100%;
     overflow: hidden;
     padding: 20px 15px;
     background-color: var(--color-barra-lateral);
-    transition: width 0.5s ease-in-out;
+    transition: width 0.5s ease-in-out, background-color 0.5s ease-in-out;
 }
 
-.mini-barra-lateral{
+.barra-lateral > div:nth-child(1),
+.barra-lateral > nav:nth-child(2),
+.barra-lateral > div:nth-child(3){
+    border: 2px solid red;
+} 
+
+.mini-barra-lateral {
     width: 80px;
 }
 
-.barra-lateral .nombre-pagina{
+.barra-lateral .nombre-pagina {
     width: 100%;
     height: 50px;
+    color: var(--color-text);
     margin-bottom: 40px;
     display: flex;
     align-items: center;
 }
 
-.barra-lateral .nombre-pagina ion-icon{
+.barra-lateral .nombre-pagina ion-icon {
     min-width: 50px;
     min-height: 50px;
     font-size: 40px;
     cursor: pointer;
 }
 
-.barra-lateral span{
+.barra-lateral span {
     width: 100px;
     white-space: nowrap;
     font-size: 18px;
@@ -61,12 +95,12 @@ body{
     transition: opacity 0.5s ease-in-out, width 0.5s ease-in-out;
 }
 
-.barra-lateral  span.oculto{
+.barra-lateral span.oculto {
     opacity: 0;
     width: 0;
 }
 
-.barra-lateral .nombre-pagina span{
+.barra-lateral .nombre-pagina span {
     margin-left: 20px;
     font-size: 48px;
     font-weight: bold;
@@ -74,7 +108,7 @@ body{
 
 /* boton */
 
-.barra-lateral .boton{
+.barra-lateral .boton {
     margin: 25px 0 0 0;
     width: 100%;
     height: 45px;
@@ -88,37 +122,144 @@ body{
     color: var(--color-boton-text);
 }
 
-.barra-lateral .boton ion-icon{
+.barra-lateral .boton ion-icon {
     min-width: 50px;
     font-size: 25px;
 }
 
 /* navegacion */
 
-.barra-lateral .navegacion li{
+.barra-lateral .navegacion li {
     list-style: none;
     display: flex;
     margin-bottom: 5px;
 }
 
-.barra-lateral .navegacion a{
+.barra-lateral .navegacion a {
     width: 100%;
     height: 45px;
     display: flex;
     align-items: center;
     text-decoration: none;
     border-radius: 10px;
-    background-color: var(--color-barra-lateral);
     color: var(--color-text-menu);
 }
 
-.barra-lateral .navegacion a:hover{
+.barra-lateral .navegacion a:hover {
     background-color: var(--color-menu-hover);
     color: var(--color-menu-hover-text);
 }
 
-.barra-lateral .navegacion a ion-icon{
+.barra-lateral .navegacion a ion-icon {
     min-width: 50px;
     font-size: 25px;
 }
 
+/* linea */
+
+.barra-lateral .linea hr {
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-linea)
+}
+
+/* Modo Oscuro */
+
+.barra-lateral .modo-oscuro {
+    width: 100%;
+    margin-bottom: 80px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.barra-lateral .modo-oscuro .info {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    width: 150px;
+    height: 45px;
+    color: var(--color-text-menu);
+}
+
+.barra-lateral .modo-oscuro ion-icon {
+    width: 50px;
+    font-size: 20px;
+}
+
+/* Interruptor */
+
+.barra-lateral .modo-oscuro .interruptor {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 50px;
+    height: 45px;
+}
+
+.barra-lateral .modo-oscuro .base {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 35px;
+    height: 20px;
+    border-radius: 50px;
+    background-color: var(--color-interruptor-base);
+    cursor: pointer;
+}
+
+.barra-lateral .modo-oscuro .circulo {
+    position: absolute;
+    width: 18px;
+    height: 90%;
+    border-radius: 50%;
+    background-color: var(--color-interruptor-circulo);
+    left: 2px;
+    transition: left 0.5s ease-in-out;
+}
+
+.barra-lateral .modo-oscuro .prendido {
+    left: 15px;
+}
+
+/* Usuario */
+
+.barra-lateral .usuario{
+    width: 100%;
+    display: flex;
+}
+
+.barra-lateral .usuario img{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+}
+
+.barra-lateral .usuario .info-usuario{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--color-text);
+    overflow: hidden;
+}
+
+.barra-lateral .usuario .nombre-email{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+}
+
+.barra-lateral .usuario .nombre{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.barra-lateral .usuario .email{
+    font-size: 13px;
+}
+
+.barra-lateral .usuario .ion-icon{
+    font-size: 20px;
+}

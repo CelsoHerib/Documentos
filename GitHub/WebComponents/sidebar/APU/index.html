@@ -7,46 +7,100 @@
     <title>Apu sidebar</title>
   </head>
   <body>
+
     <div class="barra-lateral">
 
-      <div class="nombre-pagina">
-        <ion-icon id="bug" name="bug-outline"></ion-icon>
-        <span>BUG</span>
+      <!-- 1° divisoria -->
+      <div>
+
+        <div class="nombre-pagina">
+          <ion-icon id="bug" name="bug-outline"></ion-icon>
+          <span>BUG</span>
+        </div>
+
+        <button class="boton">
+          <ion-icon name="add-circle-outline"></ion-icon>
+          <span>Añadir</span>
+        </button>
+
       </div>
 
-      <button class="boton">
-        <ion-icon name="add-circle-outline"></ion-icon>
-        <span>Añadir</span>
-      </button>
-
+      <!-- 2° nav divisoria -->
       <nav class="navegacion">
         <ul>
           <li>
             <a href="#"><ion-icon name="mail-unread-outline"></ion-icon>
-            <span>Mensajes</span></a>
+              <span>Mensajes</span></a>
           </li>
           <li>
             <a href="#"><ion-icon name="star-outline"></ion-icon>
-            <span>Favoritos</span></a>
+              <span>Favoritos</span></a>
           </li>
           <li>
             <a href="#"><ion-icon name="paper-plane-outline"></ion-icon>
-            <span>Enviar</span></a>
+              <span>Enviar</span></a>
           </li>
           <li>
             <a href="#"><ion-icon name="document-outline"></ion-icon>
-            <span>Documentos</span></a>
+              <span>Documentos</span></a>
           </li>
           <li>
             <a href="#"><ion-icon name="bookmarks-outline"></ion-icon>
-            <span>Etiquetas</span></a>
+              <span>Etiquetas</span></a>
           </li>
-           <li>
+          <li>
             <a href="#"><ion-icon name="trash-outline"></ion-icon>
-            <span>Eliminados</span></a>
+              <span>Eliminados</span></a>
+          </li>
+          <li><a href="#"><ion-icon name="alert-circle-outline"></ion-icon>
+              <span>Spam</span></a>
           </li>
         </ul>
       </nav>
+
+      <!-- 3° divisoria -->
+      <div>
+
+        <!-- linea -->
+        <div class="linea">
+          <hr>
+        </div>
+
+        <!-- modo oscuro -->
+        <div class="modo-oscuro">
+
+          <div class="info">
+            <ion-icon name="moon-outline"></ion-icon>
+            <span>Oscuro</span>
+          </div>
+
+          <div class="interruptor">
+            <div class="base">
+              <div class="circulo"></div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- usuario -->
+        <div class="usuario">
+
+          <img src="./images/foto.png" alt=" foto perfil">
+
+          <div class="info-usuario">
+
+            <div class="nombre-email">
+              <span class="nombre">John Doe</span>
+              <span class="email">johndoe@email.com</span>
+            </div>
+
+            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+
+          </div>
+
+        </div>
+
+      </div>
     </div>
 
     <script src="script.js"></script>
